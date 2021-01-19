@@ -70,7 +70,7 @@ To annotate this network using one of the provided annotation files:
 5. Then move to the "Style" portion of the control panel
 6. Fill Colour -> Mapping (middle box) -> Column = Colour -> Mapping = Passthrough Mapping
 
-And here's one we made earlier using `15Jan2021_vConTACT2_genus_annotations.tsv`...
+And here's one we made earlier using `15Jan2021_vConTACT2_lowest_taxa_annotations.tsv`...
 
 ![](15Jan_lowest_taxa_network.png)
 
