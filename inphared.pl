@@ -13,7 +13,7 @@ use strict;
 use warnings;
 
 #Say hello to the user
-say "INPHARED: INfrastructre for a PHAge REference Database\n";
+say "INPHARED: INfrastructre for a PHAge REference Database v1.0\n";
 
 #Get full paths to mash, efetch, esearch, efilter and prokka. If one of these is not installed and available in PATH, the script will fail. It will tell you which it cannot find
 say "Searching for dependencies required for this script to run.\n";
