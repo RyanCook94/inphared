@@ -1,7 +1,3 @@
----
-typora-copy-images-to: ../how_many_genomes
----
-
 # inphared.pl
 
 Providing up-to-date bacteriophage genome databases, metrics and useful input files for a number of bioinformatic pipelines including vConTACT2 and MASH. The aim is to produce a useful starting point for viral genomics and meta-omics.
