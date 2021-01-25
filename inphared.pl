@@ -1397,6 +1397,7 @@ sub filter_genomes {
             #And some other edits for hosts (mostly typos)
             $host =~ s/Enterobacterial/Enterobacteria/gi;
             $host =~ s/Enterococus/Enterococcus/gi;
+            $host =~ s/Entercoccus/Enterococcus/gi;
             $host =~ s/Eschericha/Escherichia/gi;
             $host =~ s/Panteoa/Pantoea/gi;
             $host =~ s/Pseudomonad/Pseudomonas/gi;
