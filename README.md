@@ -2,6 +2,12 @@
 
 Providing up-to-date bacteriophage genome databases, metrics and useful input files for a number of bioinformatic pipelines including vConTACT2 and MASH. The aim is to produce a useful starting point for viral genomics and meta-omics.
 
+### Updates for v1.1 (09-Feb-2021)
+
+**Summary:**
+- Improved host data, particularly for Cyanophages.
+- Fixed issue with some Prokka versions outputting .gbf and others outputting .gbk, both will now be read by this script.
+
 ### Description
 
 inphared.pl (**IN**frastructure for a **PHA**ge **RE**ference **D**atabase) is a perl script which downloads and filters phage genomes from Genbank to provide the most complete phage genome database possible.
