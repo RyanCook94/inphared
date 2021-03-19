@@ -2,6 +2,13 @@
 
 Providing up-to-date bacteriophage genome databases, metrics and useful input files for a number of bioinformatic pipelines including vConTACT2 and MASH. The aim is to produce a useful starting point for viral genomics and meta-omics.
 
+### Let me skip running the script and just give me the data!
+
+- All outputs can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_data.tar.gz)
+- Input files for vConTACT2 and annotation files can be found HERE
+
+Note: The files above are up-to-date as of 24/Jan/2021. To incrimentally update these outputs, download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
+
 ### Updates:
 
 **v1.2 (18-Feb-2021):**
