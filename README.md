@@ -5,7 +5,7 @@ Providing up-to-date bacteriophage genome databases, metrics and useful input fi
 ### Let me skip running the script and just give me the data!
 
 - All outputs can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_data.tar.gz)
-- Input files for vConTACT2 and annotation files can be found HERE
+- Input files for vConTACT2 and annotation files can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_vcontact.tar.gz)
 
 Note: The files above are up-to-date as of 24/Jan/2021. To incrimentally update these outputs, download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
 
@@ -41,7 +41,7 @@ To run this script, use inphared.pl with the following command:
 
 `perl inphared.pl [options]`
 
-- `--exclusion <exclusion_list.txt>` (`-e`): This flag allows the user to specify the location of a pipe-delimited file of accessions to be excluded from the analysis. We provide the file `exclusion_list.txt` which is continually updated but can be edited by the user. We recommend using this flag.
+- `--exclusion <exclusion_list.txt>` (`-e`): This flag allows the user to specify the location of a pipe-delimited file of accessions to be excluded from the analysis. We provide the file `exclusion_list.txt` which is continually updated but can be edited by the user. We recommend using this flag. If you find any incomplete genomes, please report these in the [erroneous genomes](https://github.com/RyanCook94/inphared.pl/discussions/1) discussion page.
 - `--cpus <8>` (`-c`): This flag allows users to specify the number of CPUs to be used in the Prokka step. This is a numeric argument and the default number is 8.
 - `--outdir <directory>` (`-o`): This flag allows users to specify the name of the output directory. If it doesn't already exist, the script will produce it. The default is `inphared_date`.
 - `--help` (`-h`): This flag will print a help menu to the screen without performing any analyses.
