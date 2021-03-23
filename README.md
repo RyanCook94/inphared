@@ -2,17 +2,16 @@
 
 Providing up-to-date bacteriophage genome databases, metrics and useful input files for a number of bioinformatic pipelines including vConTACT2 and MASH. The aim is to produce a useful starting point for viral genomics and meta-omics.
 
-   * [inphared.pl](#inpharedpl)
-         * [Let me skip running the script and just give me the data!](#let-me-skip-running-the-script-and-just-give-me-the-data)
-         * [Updates:](#updates)
-         * [Description](#description)
-         * [Dependencies](#dependencies)
-         * [Usage](#usage)
-         * [Output Files](#output-files)
-         * [Supplementing and Annotating vConTACT2 Clusters](#supplementing-and-annotating-vcontact2-clusters)
-         * [Annotating Phylogenetic Trees in IToL](#annotating-phylogenetic-trees-in-itol)
-         * [Rapid Genome Comparisons using MASH](#rapid-genome-comparisons-using-mash)
-         * [Contact](#contact)
+* [Let me skip running the script and just give me the data!](#let-me-skip-running-the-script-and-just-give-me-the-data)
+* [Updates:](#updates)
+* [Description](#description)
+* [Dependencies](#dependencies)
+* [Usage](#usage)
+* [Output Files](#output-files)
+* [Supplementing and Annotating vConTACT2 Clusters](#supplementing-and-annotating-vcontact2-clusters)
+* [Annotating Phylogenetic Trees in IToL](#annotating-phylogenetic-trees-in-itol)
+* [Rapid Genome Comparisons using MASH](#rapid-genome-comparisons-using-mash)
+* [Contact](#contact)
 
 ### Let me skip running the script and just give me the data!
 
