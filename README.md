@@ -4,9 +4,9 @@ Providing up-to-date bacteriophage genome databases, metrics and useful input fi
 
 ## Shortcuts:
 
+* [Description](#description)
 * [Let me skip running the script and just give me the data!](#let-me-skip-running-the-script-and-just-give-me-the-data)
 * [Updates](#updates)
-* [Description](#description)
 * [Dependencies](#dependencies)
 * [Usage](#usage)
 * [Output Files](#output-files)
@@ -14,6 +14,12 @@ Providing up-to-date bacteriophage genome databases, metrics and useful input fi
 * [Annotating Phylogenetic Trees in IToL](#annotating-phylogenetic-trees-in-itol)
 * [Rapid Genome Comparisons using MASH](#rapid-genome-comparisons-using-mash)
 * [Contact](#contact)
+
+## Description
+
+inphared.pl (**IN**frastructure for a **PHA**ge **RE**ference **D**atabase) is a perl script which downloads and filters phage genomes from Genbank to provide the most complete phage genome database possible.
+
+Useful information, including viral taxonomy and bacterial host data, is extracted from the Genbank files and provided in a summary table. Genes are called on the genomes using Prokka and this output is used to gather metrics which are summarised in the output files, as well as useful input files for vConTACT2.
 
 ## Let me skip running the script and just give me the data!
 
@@ -33,12 +39,6 @@ Note: The files above are up-to-date as of 24/Jan/2021. To incrimentally update 
 
 - Improved host data, particularly for Cyanophages.
 - Fixed issue with some Prokka versions outputting .gbf and others outputting .gbk, both will now be read by this script.
-
-## Description
-
-inphared.pl (**IN**frastructure for a **PHA**ge **RE**ference **D**atabase) is a perl script which downloads and filters phage genomes from Genbank to provide the most complete phage genome database possible.
-
-Useful information, including viral taxonomy and bacterial host data, is extracted from the Genbank files and provided in a summary table. Genes are called on the genomes using Prokka and this output is used to gather metrics which are summarised in the output files, as well as useful input files for vConTACT2.
 
 ## Dependencies
 
