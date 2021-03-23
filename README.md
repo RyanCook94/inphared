@@ -15,14 +15,14 @@ Providing up-to-date bacteriophage genome databases, metrics and useful input fi
 * [Rapid Genome Comparisons using MASH](#rapid-genome-comparisons-using-mash)
 * [Contact](#contact)
 
-### Let me skip running the script and just give me the data!
+## Let me skip running the script and just give me the data!
 
 - All outputs can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_data.tar.gz)
 - Input files for vConTACT2 and annotation files can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_vcontact.tar.gz)
 
 Note: The files above are up-to-date as of 24/Jan/2021. To incrimentally update these outputs, download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
 
-### Updates:
+## Updates
 
 **v1.2 (18-Feb-2021):**
 
@@ -34,13 +34,13 @@ Note: The files above are up-to-date as of 24/Jan/2021. To incrimentally update 
 - Improved host data, particularly for Cyanophages.
 - Fixed issue with some Prokka versions outputting .gbf and others outputting .gbk, both will now be read by this script.
 
-### Description
+## Description
 
 inphared.pl (**IN**frastructure for a **PHA**ge **RE**ference **D**atabase) is a perl script which downloads and filters phage genomes from Genbank to provide the most complete phage genome database possible.
 
 Useful information, including viral taxonomy and bacterial host data, is extracted from the Genbank files and provided in a summary table. Genes are called on the genomes using Prokka and this output is used to gather metrics which are summarised in the output files, as well as useful input files for vConTACT2.
 
-### Dependencies
+## Dependencies
 
 inphared.pl is a Perl script which makes calls to commandline utilities which must be installed and available in the PATH for the script to run. If it doesn't find one of these, it will print which dependency could not be found.
 
@@ -48,7 +48,7 @@ inphared.pl is a Perl script which makes calls to commandline utilities which mu
 - MASH (available [HERE](https://mash.readthedocs.io/en/latest/index.html))
 - efetch, esearch and efilter (available together as part of Entrez Direct: E-utilities [HERE](https://www.ncbi.nlm.nih.gov/books/NBK179288/))
 
-### Usage
+## Usage
 
 To run this script, use inphared.pl with the following command:
 
@@ -61,7 +61,7 @@ To run this script, use inphared.pl with the following command:
 
 Upon first usage, it will take a long time to call genes on all of the genomes. This time can be reduced by downloading the existing `GenomesDB/` directory from [HERE](http://s3.climb.ac.uk/ADM_share/website/GenomesDB.tar). Download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
 
-### Output Files
+## Output Files
 
 Output files will be written to a new directory named `inphared_date` unless a different name is specified. All output files will have the date of usage as a prefix. The summary of output files below uses 15th January 2021 as an example (although this prefix will obviously change).
 
@@ -92,7 +92,7 @@ Output files will be written to a new directory named `inphared_date` unless a d
 | 15Jan2021_itol_length_annotations.txt           | This text file can be used to add bars to the nodes on phylogenetic trees which show the length (KB) of the viral genome (see below). |
 | 15Jan2021.log                                   | This text file contains a list of accessions for genomes that were filtered out from the original Genbank files and excluded from subsequent analysis. |
 
-### Supplementing and Annotating vConTACT2 Clusters
+## Supplementing and Annotating vConTACT2 Clusters
 
 Combine the `date_vConTACT2_proteins.faa` with your own fasta of file of translated ORFs, and combine `date_vConTACT2_gene_to_genome.csv` with your own mapping file (**watch out for duplicated headers in the gene_to_genome.csv file if your file already has headers**). Then run [vConTACT2](https://bitbucket.org/MAVERICLab/vcontact2/src/master/) as normal using the `--db 'None'` option, as this will avoid RefSeq duplicates.
 
@@ -111,7 +111,7 @@ And here's one we made earlier using `15Jan2021_vConTACT2_lowest_taxa_annotation
 
 The colours in the annotation files are generated from random hex codes. If you end up with a particularly ugly colour code you can change it easily using a sed command such as: `sed -i 's/#FF69B4/#FFFF00/g' *annotations*`. This particular command finds all uses of `#FF69B4` in files where `annotations` is part of the file name and replaces with `#FFFF00`. It is important to change the hex code in both the vConTACT2 and IToL annotation files, as their colour scheme is consistent.
 
-### Annotating Phylogenetic Trees in IToL
+## Annotating Phylogenetic Trees in IToL
 
 To use the IToL annotation files produced by inphared.pl, produce any phylogenetic tree in which the names of the nodes are virus accession numbers (e.g. MK250025) and visualise this tree using [IToL](https://itol.embl.de/). To use the annotation files, simply drag them onto the open tree (an error message will appear saying nodes X, Y and Z couldn't be found. Don't worry about this. This is because the annotation file will contain data for nodes which aren't present in the tree).
 
@@ -119,11 +119,11 @@ And here's one we made earlier showing a phylogenetic tree annotated with `15Jan
 
 ![](15Jan_tree_with_lengths.png)
 
-### Rapid Genome Comparisons using MASH
+## Rapid Genome Comparisons using MASH
 
 This script creates a MASH sketch database to allow for rapid comparisons of new genomes/sequences/contigs/etc. with the INPHARED database. To find the closest known relatives to your sequence of interest, use a command such as `mash.2 dist 24Jan2021_genomes.fa.msh my_new_genome.fasta`. To sort the MASH output with closest relatives at the bottom and save it to a file, modify the command such as this `mash.2 dist 24Jan2021_genomes.fa.msh my_new_genome.fasta | sort -k3 -n -r >mash_output.tsv`. The MASH output consists of tab delimited rows of reference name, query name, distance, p-value, and matching hashes. The distance value corresponds to average nucleotide identity with a distance of 0 indicating 100% similarity, and a distance of 1 indicating 0% similarity. Please see more about [MASH](https://mash.readthedocs.io/en/latest/tutorials.html#simple-distance-estimation).
 
-### Contact
+## Contact
 
 Please contact Ryan Cook ([ryan.cook@nottingham.ac.uk](ryan.cook@nottingham.ac.uk), [@RyanCookAMR](https://twitter.com/RyanCookAMR)) with any questions, concerns or comments.
 
