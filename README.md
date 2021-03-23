@@ -2,6 +2,8 @@
 
 Providing up-to-date bacteriophage genome databases, metrics and useful input files for a number of bioinformatic pipelines including vConTACT2 and MASH. The aim is to produce a useful starting point for viral genomics and meta-omics.
 
+### Shortcuts:
+
 * [Let me skip running the script and just give me the data!](#let-me-skip-running-the-script-and-just-give-me-the-data)
 * [Updates:](#updates)
 * [Description](#description)
