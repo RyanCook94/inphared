@@ -21,6 +21,8 @@ inphared.pl (**IN**frastructure for a **PHA**ge **RE**ference **D**atabase) is a
 
 Useful information, including viral taxonomy and bacterial host data, is extracted from the Genbank files and provided in a summary table. Genes are called on the genomes using Prokka and this output is used to gather metrics which are summarised in the output files, as well as useful input files for vConTACT2.
 
+![](inphared_workthrough.png)
+
 ## Let me skip running the script and just give me the data!
 
 - All outputs can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_data.tar.gz)
