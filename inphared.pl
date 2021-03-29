@@ -343,8 +343,8 @@ if (-e "$phagedb") {
     #If it doesn't exist, then download the genomes! Current search parameters download genomes with the PHG identifier and minimum/maximum length cutoffs. These are also filtered later on in the script
     say "$phagedb doesn't yet exist, so let's make it!\n";
     say "This step may take some. Please free free to put the kettle on...\n";
-    system ("$esearch_path -db nucleotide -query \"$meta\" | $efilter_path -query \"1417:700000 [SLEN] \" | $efetch_path -format gb >$phagedb");
-    system ("$esearch_path -db nucleotide -query \"gbdiv_PHG\"[prop] | $efilter_path -query \"1417:700000 [SLEN] \" | $efetch_path -format gb >>$phagedb"); 
+    system ("$esearch_path -db nucleotide -query \"$meta\" | $efilter_path -query \"1417:800000 [SLEN] \" | $efetch_path -format gb >$phagedb");
+    system ("$esearch_path -db nucleotide -query \"gbdiv_PHG\"[prop] | $efilter_path -query \"1417:800000 [SLEN] \" | $efetch_path -format gb >>$phagedb"); 
 };
 
 #Create output file with relevant extension for tab separated data relating to phage genomes 
