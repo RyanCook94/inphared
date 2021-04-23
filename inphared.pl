@@ -1465,6 +1465,7 @@ sub filter_genomes {
             $host =~ s/Eschericha/Escherichia/gi;
             $host =~ s/Panteoa/Pantoea/gi;
             $host =~ s/Pseudomonad/Pseudomonas/gi;
+            $host =~ s/Bacilus/Bacillus/gi;
             
             #This script will grab the lowest taxa rank available from classification where possible (although some nonsense taxa will inevitably come through)
             my $lowest_taxa = "Unclassified";
