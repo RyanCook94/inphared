@@ -4,8 +4,8 @@ Providing up-to-date bacteriophage genome databases, metrics and useful input fi
 
 ## Shortcuts:
 
-* [Description](#description)
 * [Let me skip running the script and just give me the data!](#let-me-skip-running-the-script-and-just-give-me-the-data)
+* [Description](#description)
 * [Updates](#updates)
 * [Dependencies](#dependencies)
 * [Usage](#usage)
@@ -15,6 +15,13 @@ Providing up-to-date bacteriophage genome databases, metrics and useful input fi
 * [Rapid Genome Comparisons using MASH](#rapid-genome-comparisons-using-mash)
 * [Contact](#contact)
 
+## Let me skip running the script and just give me the data!
+
+- All 24/Jan/2021 outputs can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_data.tar.gz)
+- Input files for vConTACT2 and annotation files from 24/Jan/2021 can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_vcontact.tar.gz)
+
+Note: The files above are up-to-date as of 24/Jan/2021. To incrimentally update these outputs, download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
+
 ## Description
 
 inphared.pl (**IN**frastructure for a **PHA**ge **RE**ference **D**atabase) is a perl script which downloads and filters phage genomes from Genbank to provide the most complete phage genome database possible.
@@ -22,13 +29,6 @@ inphared.pl (**IN**frastructure for a **PHA**ge **RE**ference **D**atabase) is a
 Useful information, including viral taxonomy and bacterial host data, is extracted from the Genbank files and provided in a summary table. Genes are called on the genomes using Prokka and this output is used to gather metrics which are summarised in the output files, as well as useful input files for vConTACT2.
 
 ![](inphared_workthrough.png)
-
-## Let me skip running the script and just give me the data!
-
-- All outputs can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_data.tar.gz)
-- Input files for vConTACT2 and annotation files can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_vcontact.tar.gz)
-
-Note: The files above are up-to-date as of 24/Jan/2021. To incrimentally update these outputs, download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
 
 ## Updates
 
