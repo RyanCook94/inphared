@@ -1017,7 +1017,10 @@ if (-f $refseq) {
 }
 
 #This is currently the endpoint of the script
-say "Finished performing analysis. Thank you for using INPHARED.pl.";
+say "Finished performing analysis. Thank you for using INPHARED.pl.\n";
+
+#Add citation to end of script
+say "Cook et al. 2021. INfrastructure for a PHAge REference Database: Identification of large-scale biases in the current collection of phage genomes.\nbioRxiv doi: 10.1101/2021.05.01.442102\n";
 
 #########################################################
 
