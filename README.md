@@ -15,7 +15,7 @@ Please see our pre-print on bioRxiv available [HERE](https://www.biorxiv.org/con
 * [Supplementing and Annotating vConTACT2 Clusters](#supplementing-and-annotating-vcontact2-clusters)
 * [Annotating Phylogenetic Trees in IToL](#annotating-phylogenetic-trees-in-itol)
 * [Rapid Genome Comparisons using MASH](#rapid-genome-comparisons-using-mash)
-* [get_closest_relatives.pl](get_closest_relatives.pl)
+* [get_closest_relatives.pl](get_closest_relatives)
 * [Contact](#contact)
 
 ## Let me skip running the script and just give me the data!
@@ -128,7 +128,7 @@ And here's one we made earlier showing a phylogenetic tree annotated with `15Jan
 
 This script creates a MASH sketch database to allow for rapid comparisons of new genomes/sequences/contigs/etc. with the INPHARED database. To find the closest known relatives to your sequence of interest, use a command such as `mash.2 dist 24Jan2021_genomes.fa.msh my_new_genome.fasta`. To sort the MASH output with closest relatives at the bottom and save it to a file, modify the command such as this `mash.2 dist 24Jan2021_genomes.fa.msh my_new_genome.fasta | sort -k3 -n -r >mash_output.tsv`. The MASH output consists of tab delimited rows of reference name, query name, distance, p-value, and matching hashes. The distance value corresponds to average nucleotide identity with a distance of 0 indicating 100% similarity, and a distance of 1 indicating 0% similarity. Please see more about [MASH](https://mash.readthedocs.io/en/latest/tutorials.html#simple-distance-estimation).
 
-## get_closest_relatives.pl
+## get_closest_relatives
 
 To use the MASH sketch database and associated metadata to retrieve useful information about a query genome's closest related phages, use the `get_closest_relatives.pl` script as follows:
 
