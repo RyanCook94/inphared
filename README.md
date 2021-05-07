@@ -15,7 +15,7 @@ Please see our pre-print on bioRxiv available [HERE](https://www.biorxiv.org/con
 * [Supplementing and Annotating vConTACT2 Clusters](#supplementing-and-annotating-vcontact2-clusters)
 * [Annotating Phylogenetic Trees in IToL](#annotating-phylogenetic-trees-in-itol)
 * [Rapid Genome Comparisons using MASH](#rapid-genome-comparisons-using-mash)
-* [get_closest_relatives.pl](get_closest_relatives)
+* [get_closest_relatives.pl](#get_closest_relatives)
 * [Contact](#contact)
 
 ## Let me skip running the script and just give me the data!
