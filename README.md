@@ -4,7 +4,7 @@ Providing up-to-date bacteriophage genome databases, metrics and useful input fi
 
 ## Citation:
 
-If you find out database useful, please see our pre-print on bioRxiv available [HERE](https://www.biorxiv.org/content/10.1101/2021.05.01.442102v1)
+If you find our database useful, please see our pre-print on bioRxiv available [HERE](https://www.biorxiv.org/content/10.1101/2021.05.01.442102v1)
 
 Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL, Jones MA, Millard A. INfrastructure for a PHAge REference Database: Identification of large-scale biases in the current collection of phage genomes. bioRxiv. 2021; 2021.05.01.442102. Cold Spring Harbor Laboratory. Available from: [https://doi.org/10.1101/2021.05.01.442102](https://doi.org/10.1101/2021.05.01.442102).
 
