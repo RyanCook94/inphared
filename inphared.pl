@@ -41,16 +41,16 @@ GetOptions(
 );
 
 #Remove a slash from the end of the output directory if the user has specified one
-    $outdir =~ s/(\/)$//;
+$outdir =~ s/(\/)$//;
 
 #If user specified help, let's die and print something!
 if ($help) {
     
-    die "Name:\n INPHARED: INfrastructre for a PHAge REference Database v1.2\n\nContact:\n Ryan Cook <stxrc24\@nottingham.ac.uk>\n\nUsage:\n  perl inphared.pl [options]\n\nOptions:\n  --help        -h   This help.\n  --exclusion   -e   Pipe-delimited text file of accessions that should be excluded. This is recommended.\n  --outdir      -o   Output directory for files to be written to. Default is inphared_"."$date"." (changes daily).\n  --cpus        -c   Number of cpus to be used in Prokka gene calling. Default is 8.\n";
+    die "Name:\n INPHARED: INfrastructre for a PHAge REference Database v1.3\n\nContact:\n Ryan Cook <stxrc24\@nottingham.ac.uk>\n\nUsage:\n  perl inphared.pl [options]\n\nOptions:\n  --help        -h   This help.\n  --exclusion   -e   Pipe-delimited text file of accessions that should be excluded. This is recommended.\n  --outdir      -o   Output directory for files to be written to. Default is inphared_"."$date"." (changes daily).\n  --cpus        -c   Number of cpus to be used in Prokka gene calling. Default is 8.\n";
 }
 
 #Say hello to the user
-say "INPHARED: INfrastructre for a PHAge REference Database v1.2\n";
+say "INPHARED: INfrastructre for a PHAge REference Database v1.3\n";
 
 #Get full paths to mash, efetch, esearch, efilter and prokka. If one of these is not installed and available in PATH, the script will fail. It will tell you which it cannot find
 say "Searching for dependencies required for this script to run.\n";
@@ -66,7 +66,7 @@ say "MASH has been found: $mash_path\n";
 #Then efetch
 say "Searching for efetch...";
 my $tool_efetch = "efetch";
-my $efetch_path = `which $tool_efetch`;
+my $efetch_path = "/home/andrew/Documents/andrey/custom_db/edirect/efetch";
 chomp $efetch_path;
 die "$tool_efetch was not found. Need to install efetch in PATH.\n" unless ($efetch_path);
 say "efetch has been found: $efetch_path\n";
@@ -74,7 +74,7 @@ say "efetch has been found: $efetch_path\n";
 #Then esearch
 say "Searching for esearch...";
 my $tool_esearch = "esearch";
-my $esearch_path = `which $tool_esearch`;
+my $esearch_path = "/home/andrew/Documents/andrey/custom_db/edirect/esearch";
 chomp $esearch_path;
 die "$tool_esearch was not found. Need to install esearch in PATH.\n" unless ($esearch_path);
 say "esearch has been found: $esearch_path\n";
@@ -82,7 +82,7 @@ say "esearch has been found: $esearch_path\n";
 #Then efilter
 say "Searching for efilter...";
 my $tool_efilter = "efilter";
-my $efilter_path = `which $tool_efilter`;
+my $efilter_path = "/home/andrew/Documents/andrey/custom_db/edirect/efilter";
 chomp $efilter_path;
 die "$tool_efilter was not found. Need to install efilter in PATH.\n" unless ($efilter_path);
 say "efilter has been found: $efilter_path\n";
@@ -1017,10 +1017,7 @@ if (-f $refseq) {
 }
 
 #This is currently the endpoint of the script
-say "Finished performing analysis. Thank you for using INPHARED.pl.\n";
-
-#Add citation to end of script
-say "Cook et al. 2021. INfrastructure for a PHAge REference Database: Identification of large-scale biases in the current collection of phage genomes.\nbioRxiv doi: 10.1101/2021.05.01.442102\n";
+say "Finished performing analysis. Thank you for using INPHARED.pl.";
 
 #########################################################
 
@@ -1105,6 +1102,15 @@ sub filter_genomes {
     my $phagedb = $_[1];
     my $date = $_[2];
     
+    #Produce table for upload
+    my $html = "$outdir"."/"."$date"."_millardlab_website_table.txt";
+    
+    #open table for upload 
+    open(HTML,">$html") or die;
+    
+    #Print useful headers into table for upload
+    print HTML "Accession\tDescription\tClassification\tGenome Length (bp)\tmolGC (%)\tGenus\tSub-family\tFamily\tHost\n";
+    
     #Open TSV file for writing useful phage information
     open(TAXA,">$output") or die;
     
@@ -1112,10 +1118,10 @@ sub filter_genomes {
     open(TAXA_without_refseq,">$output_without_refseq") or die;
 
     #Print useful headers into TSV file
-    print TAXA "Accession\tDescription\tClassification\tGenome Length (bp)\tJumbophage\tmolGC (%)\tMolecule\tModification Date\tNumber CDS\tPositive Strand (%)\tNegative Strand (%)\tCoding Capacity (%)\ttRNAs\tHost\tLowest Taxa\tGenus\tSub-family\tFamily\n";
+    print TAXA "Accession\tDescription\tClassification\tGenome Length (bp)\tJumbophage\tmolGC (%)\tMolecule\tModification Date\tNumber CDS\tPositive Strand (%)\tNegative Strand (%)\tCoding Capacity (%)\tLow Coding Capacity Warning\ttRNAs\tHost\tLowest Taxa\tGenus\tSub-family\tFamily\tRealm\tBaltimore Group\tGenbank Division\n";
     
     #And the one excluding refseq...
-    print TAXA_without_refseq "Accession\tDescription\tClassification\tGenome Length (bp)\tJumbophage\tmolGC (%)\tMolecule\tModification Date\tNumber CDS\tPositive Strand (%)\tNegative Strand (%)\tCoding Capacity(%)\ttRNAs\tHost\tLowest Taxa\tGenus\tSub-family\tFamily\n";
+    print TAXA_without_refseq "Accession\tDescription\tClassification\tGenome Length (bp)\tJumbophage\tmolGC (%)\tMolecule\tModification Date\tNumber CDS\tPositive Strand (%)\tNegative Strand (%)\tCoding Capacity(%)\tLow Coding Capacity Warning\ttRNAs\tHost\tLowest Taxa\tGenus\tSub-family\tFamily\tRealm\tBaltimore Group\tGenbank Division\n";
 
     #Read genomes in from the phage DB
     say "Reading $phagedb for filtering...\n";
@@ -1176,6 +1182,7 @@ sub filter_genomes {
 
             #set variables to print out 
             my $primary_id = $inseq_obj->display_id;
+            my $division = $inseq_obj->division;
             my $length = $inseq_obj->length;
             my $jumbo;
             my $species_string = $inseq_obj->species->node_name;
@@ -1374,6 +1381,18 @@ sub filter_genomes {
             #Now let's express as percentage
             my $coding_capacity = ($coding_count/$length)*100;
             
+            #Let's add a warning flag if this is less than 50
+            my $coding_warning;
+            
+            if($coding_capacity < 50) {
+            
+                $coding_warning = "WARNING";
+            
+            } else {
+                
+                $coding_warning = "NA";
+            }
+            
             #The script will grab host data from the phage description where possible (although some nonsense hosts will inevitably come through)
             my $host = "Unspecified";
             my $pos;
@@ -1468,13 +1487,15 @@ sub filter_genomes {
             $host =~ s/Eschericha/Escherichia/gi;
             $host =~ s/Panteoa/Pantoea/gi;
             $host =~ s/Pseudomonad/Pseudomonas/gi;
-            $host =~ s/Bacilus/Bacillus/gi;
             
             #This script will grab the lowest taxa rank available from classification where possible (although some nonsense taxa will inevitably come through)
             my $lowest_taxa = "Unclassified";
             my $genus = "Unclassified";
             my $sub_family = "Unclassified";
             my $family = "Unclassified";
+            my $realm = "Unclassified";
+            my $phylum = "Unclassified";
+            my $baltimore = "Unclassified";
             
             #Go through each word in the classification, one at a time (left to right)
             foreach my $preword (@classification) {
@@ -1501,16 +1522,30 @@ sub filter_genomes {
                     #Grab the subfamily where possible (these are words that end in virinae)
                     if($word =~ m/^[A-Z][a-z]*virinae$/) {
                 
-                        #This is my genus
+                        #This is my sub-family
                         $sub_family = $word;
                     }
                 
                     #Grab the family where possible (these are words that end in viridae)
                     if($word =~ m/^[A-Z][a-z]*viridae$/) {
                 
-                        #This is my genus
+                        #This is my family
                         $family = $word;
-                    }          
+                    }
+                    
+                    #Grab the realm where possible (these are words that end in viria)
+                    if($word =~ m/^[A-Z][a-z]*viria$/) {
+                
+                        #This is my realm
+                        $realm = $word;
+                    }
+                    
+                    #Grab the phylum where possible (these are words that end in viricota, is important for baltimore group)
+                    if($word =~ m/^[A-Z][a-z]*viricota$/) {
+                
+                        #This is my phylum
+                        $phylum = $word;
+                    }
                 }
             }
             
@@ -1536,9 +1571,44 @@ sub filter_genomes {
                 $lowest_taxa = $family;
             }
             
+            #Let's use the realm to try and grab the Baltimore group
+            if($phylum =~ m/^Dividoviricota$|^Preplasmiviricota$|^Taleaviricota$|^Uroviricota$/) {
+            
+                #It must be Group I
+                $baltimore = "Group I";
+            
+            }
+            
+            if($phylum =~ m/^Hofneiviricota$|^Phixviricota$|^Saleviricota$/) {
+            
+                #It must be Group I
+                $baltimore = "Group II";
+            
+            }
+            
+            if($phylum =~ m/^Duplornaviricota$/) {
+            
+                #It must be Group I
+                $baltimore = "Group III";
+            
+            }
+            
+            if($phylum =~ m/^Lenarviricota$/) {
+            
+                #It must be Group I
+                $baltimore = "Group IV";
+            
+            }
+            
             #Print useful information to TSV file
-            print TAXA "$primary_id\t$species_string\t@classification\t$length\t$jumbo\t$pergc\t$molecule\t@dates\t$total_CDS\t$per_plus\t$per_minus\t$coding_capacity\t$trna_count\t$host\t$lowest_taxa\t$genus\t$sub_family\t$family\n";
+            print TAXA "$primary_id\t$species_string\t@classification\t$length\t$jumbo\t$pergc\t$molecule\t@dates\t$total_CDS\t$per_plus\t$per_minus\t$coding_capacity\t$coding_warning\t$trna_count\t$host\t$lowest_taxa\t$genus\t$sub_family\t$family\t$realm\t$baltimore\t$division\n";
                         
+            #sort formating for html links (REMOVE THIS FOR PUBLIC VERSION OF SCRIPT)
+            my $postfix =  "\">$primary_id</a>";
+            my $prefix = "<a href=\"https://www.ncbi.nlm.nih.gov/nuccore/";
+            my $url = $prefix.$primary_id.$postfix;
+            print HTML "$url\t$species_string\t@classification\t$length\t$pergc\t$genus\t$sub_family\t$family\t$host\n";
+            
             #Declare a variable for the genus hex code
             my $genus_hex;
             my $sub_family_hex;
@@ -1649,7 +1719,7 @@ sub filter_genomes {
                 $seq_out_excluding_refseq->write_seq($inseq_obj);
                 
                 #Write these to the tsv file that does not include RefSeq sequences
-                print TAXA_without_refseq "$primary_id\t$species_string\t@classification\t$length\t$jumbo\t$pergc\t$molecule\t@dates\t$total_CDS\t$per_plus\t$per_minus\t$coding_capacity\t$trna_count\t$host\t$lowest_taxa\t$genus\t$sub_family\t$family\n";
+                print TAXA_without_refseq "$primary_id\t$species_string\t@classification\t$length\t$jumbo\t$pergc\t$molecule\t@dates\t$total_CDS\t$per_plus\t$per_minus\t$coding_capacity\t$coding_warning\t$trna_count\t$host\t$lowest_taxa\t$genus\t$sub_family\t$family\t$realm\t$baltimore\t$division\n";
                 
                 #Grab whatever hex code was used for the lowest taxa
                 my $lowest_taxa_hex = $hex_hash{"$lowest_taxa"};
