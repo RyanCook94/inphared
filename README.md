@@ -24,10 +24,28 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 
 ## Let me skip running the script and just give me the data!
 
-- All 24/Jan/2021 outputs can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_data.tar.gz)
-- Input files for vConTACT2 and annotation files from 24/Jan/2021 can be found [HERE](http://inphared.s3.climb.ac.uk/inphared_vcontact.tar.gz)
-
-Note: The files above are up-to-date as of 24/Jan/2021. To incrimentally update these outputs, download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
+[1Aug2021_data_excluding_refseq.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_data_excluding_refseq.tsv)
+[1Aug2021_data.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_data.tsv)
+[1Aug2021_genomes.db](http://inphared.s3.climb.ac.uk/1Aug2021_genomes.db)
+[1Aug2021_genomes_excluding_refseq.fa](http://inphared.s3.climb.ac.uk/1Aug2021_genomes_excluding_refseq.fa)
+[1Aug2021_genomes.fa](http://inphared.s3.climb.ac.uk/1Aug2021_genomes.fa)
+[1Aug2021_genomes.fa.msh](http://inphared.s3.climb.ac.uk/1Aug2021_genomes.fa.msh)
+[1Aug2021_itol_family_annotations.txt](http://inphared.s3.climb.ac.uk/1Aug2021_itol_family_annotations.txt)
+[1Aug2021_itol_genus_annotations.txt](http://inphared.s3.climb.ac.uk/1Aug2021_itol_genus_annotations.txt)
+[1Aug2021_itol_host_annotations.txt](http://inphared.s3.climb.ac.uk/1Aug2021_itol_host_annotations.txt)
+[1Aug2021_itol_length_annotations.txt](http://inphared.s3.climb.ac.uk/1Aug2021_itol_length_annotations.txt)
+[1Aug2021_itol_lowest_taxa_annotations.txt](http://inphared.s3.climb.ac.uk/1Aug2021_itol_lowest_taxa_annotations.txt)
+[1Aug2021_itol_node_label_annotations.txt](http://inphared.s3.climb.ac.uk/1Aug2021_itol_node_label_annotations.txt)
+[1Aug2021_itol_subfamily_annotations.txt](http://inphared.s3.climb.ac.uk/1Aug2021_itol_subfamily_annotations.txt)
+[1Aug2021_phages_downloaded_from_genbank.gb](http://inphared.s3.climb.ac.uk/1Aug2021_phages_downloaded_from_genbank.gb)
+[1Aug2021_refseq_genomes.fa](http://inphared.s3.climb.ac.uk/1Aug2021_refseq_genomes.fa)
+[1Aug2021_vConTACT2_family_annotations.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_vConTACT2_family_annotations.tsv)
+[1Aug2021_vConTACT2_gene_to_genome.csv](http://inphared.s3.climb.ac.uk/1Aug2021_vConTACT2_gene_to_genome.csv)
+[1Aug2021_vConTACT2_genus_annotations.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_vConTACT2_genus_annotations.tsv)
+[1Aug2021_vConTACT2_host_annotations.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_vConTACT2_host_annotations.tsv)
+[1Aug2021_vConTACT2_lowest_taxa_annotations.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_vConTACT2_lowest_taxa_annotations.tsv)
+[1Aug2021_vConTACT2_proteins.faa](http://inphared.s3.climb.ac.uk/1Aug2021_vConTACT2_proteins.faa)
+[1Aug2021_vConTACT2_subfamily_annotations.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_vConTACT2_subfamily_annotations.tsv)
 
 ## Description
 
