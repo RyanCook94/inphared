@@ -22,7 +22,7 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 * [get_closest_relatives.pl](#get_closest_relatives)
 * [Contact](#contact)
 
-## Let me skip running the script and just give me the data!
+## Let me skip running the script and just give me this month's data!
 
 - [1Aug2021_data_excluding_refseq.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_data_excluding_refseq.tsv)
 - [1Aug2021_data.tsv](http://inphared.s3.climb.ac.uk/1Aug2021_data.tsv)
