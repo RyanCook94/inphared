@@ -10,7 +10,7 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 
 ## Shortcuts:
 
-* [Let me skip running the script and just give me the data!](#let-me-skip-running-the-script-and-just-give-me-the-data)
+* [Let me skip running the script and just give me this month's data!](#let-me-skip-running-the-script-and-just-give-me-the-data)
 * [Description](#description)
 * [Updates](#updates)
 * [Dependencies](#dependencies)
