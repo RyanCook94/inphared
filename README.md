@@ -57,6 +57,10 @@ Useful information, including viral taxonomy and bacterial host data, is extract
 
 ## Updates
 
+**v1.3 (02-Aug-2021):**
+
+- tsv files now include realm, Baltimore group, a warning flag for genomes with <50% coding capacity (may be issues with the assembly), and the Genbank designation (i.e. PHG, ENV)
+
 **v1.2 (18-Feb-2021):**
 
 - Output files now written to directory, name of which can be specified (see usage).
