@@ -66,7 +66,7 @@ say "MASH has been found: $mash_path\n";
 #Then efetch
 say "Searching for efetch...";
 my $tool_efetch = "efetch";
-my $efetch_path = "/home/andrew/Documents/andrey/custom_db/edirect/efetch";
+my $efetch_path = `which $tool_efetch`;
 chomp $efetch_path;
 die "$tool_efetch was not found. Need to install efetch in PATH.\n" unless ($efetch_path);
 say "efetch has been found: $efetch_path\n";
@@ -74,7 +74,7 @@ say "efetch has been found: $efetch_path\n";
 #Then esearch
 say "Searching for esearch...";
 my $tool_esearch = "esearch";
-my $esearch_path = "/home/andrew/Documents/andrey/custom_db/edirect/esearch";
+my $esearch_path = `which $tool_esearch`;
 chomp $esearch_path;
 die "$tool_esearch was not found. Need to install esearch in PATH.\n" unless ($esearch_path);
 say "esearch has been found: $esearch_path\n";
@@ -82,7 +82,7 @@ say "esearch has been found: $esearch_path\n";
 #Then efilter
 say "Searching for efilter...";
 my $tool_efilter = "efilter";
-my $efilter_path = "/home/andrew/Documents/andrey/custom_db/edirect/efilter";
+my $efilter_path = `which $tool_efilter`;
 chomp $efilter_path;
 die "$tool_efilter was not found. Need to install efilter in PATH.\n" unless ($efilter_path);
 say "efilter has been found: $efilter_path\n";
