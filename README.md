@@ -94,7 +94,7 @@ To run this script, use inphared.pl with the following command:
 - `--cpus <8>` (`-c`): This flag allows users to specify the number of CPUs to be used in the Prokka step. This is a numeric argument and the default number is 8.
 - `--outdir <directory>` (`-o`): This flag allows users to specify the name of the output directory. If it doesn't already exist, the script will produce it. The default is `inphared_date`.
 - `--help` (`-h`): This flag will print a help menu to the screen without performing any analyses.
-- `--PHROG (`-P`): This optional flag allows users to specify the path to HMMs made from the PHROGs database, for consistent annotation of genomes (download the HMMs for yourself [HERE](https://s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz) and read about them [HERE](http://millardlab.org/2021/11/21/phage-annotation-with-phrogs/)). 
+- `--PHROG` (`-P`): This optional flag allows users to specify the path to HMMs made from the PHROGs database, for consistent annotation of genomes (download the HMMs for yourself [HERE](https://s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz) and read about them [HERE](http://millardlab.org/2021/11/21/phage-annotation-with-phrogs/)). 
 
 Upon first usage, it will take a long time to call genes on all of the genomes. This time can be reduced by downloading the existing `GenomesDB/` directory from [HERE](http://inphared.s3.climb.ac.uk/GenomesDB_20201412.tar.gz). Download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
 
