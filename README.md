@@ -46,6 +46,7 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 - [1Dec2021_vConTACT2_lowest_taxa_annotations.tsv](http://inphared.s3.climb.ac.uk/1Dec2021_vConTACT2_lowest_taxa_annotations.tsv)
 - [1Dec2021_vConTACT2_proteins.faa](http://inphared.s3.climb.ac.uk/1Dec2021_vConTACT2_proteins.faa)
 - [1Dec2021_vConTACT2_subfamily_annotations.tsv](http://inphared.s3.climb.ac.uk/1Dec2021_vConTACT2_subfamily_annotations.tsv)
+- [GenomesDB Directory](http://inphared.s3.climb.ac.uk/GenomesDB_20201412.tar.gz) (please note that this doesn't get updated each month, it's just here as a time-saver if you run the script yourself. This version is for 13/Dec/2021)
 
 ## Description
 
@@ -93,7 +94,7 @@ To run this script, use inphared.pl with the following command:
 - `--outdir <directory>` (`-o`): This flag allows users to specify the name of the output directory. If it doesn't already exist, the script will produce it. The default is `inphared_date`.
 - `--help` (`-h`): This flag will print a help menu to the screen without performing any analyses.
 
-Upon first usage, it will take a long time to call genes on all of the genomes. This time can be reduced by downloading the existing `GenomesDB/` directory from [HERE](http://s3.climb.ac.uk/ADM_share/website/GenomesDB.tar). Download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
+Upon first usage, it will take a long time to call genes on all of the genomes. This time can be reduced by downloading the existing `GenomesDB/` directory from [HERE](http://inphared.s3.climb.ac.uk/GenomesDB_20201412.tar.gz). Download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
 
 ## Output Files
 
