@@ -46,6 +46,7 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 - [1Dec2021_vConTACT2_lowest_taxa_annotations.tsv](http://inphared.s3.climb.ac.uk/1Dec2021_vConTACT2_lowest_taxa_annotations.tsv)
 - [1Dec2021_vConTACT2_proteins.faa](http://inphared.s3.climb.ac.uk/1Dec2021_vConTACT2_proteins.faa)
 - [1Dec2021_vConTACT2_subfamily_annotations.tsv](http://inphared.s3.climb.ac.uk/1Dec2021_vConTACT2_subfamily_annotations.tsv)
+- [PHROGs HMMs for consistent annotation of genomes (see the new --PHROG optional flag)](http://s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz)
 - [GenomesDB Directory](http://inphared.s3.climb.ac.uk/GenomesDB_20201412.tar.gz) (please note that this doesn't get updated each month, it's just here as a time-saver if you run the script yourself. This version is for 13/Dec/2021)
 
 ## Description
@@ -58,20 +59,20 @@ Useful information, including viral taxonomy and bacterial host data, is extract
 
 ## Updates
 
+**v1.5 (15-Dec-2021):**
+- Added an optional flag to annotate genomes with HMMs produced from the [PHROGs](https://academic.oup.com/nargab/article/3/3/lqab067/6342220) database. Download the HMMs for yourself [HERE](http://s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz). Read about what we did [HERE](http://millardlab.org/2021/12/15/inphared-re-annotated-with-phrogs/).
+
 **v1.4 (11-Nov-2021):**
 - tsv files now include expanded taxa fields including genus, sub-family, family, order, class, phylum, kingdom and realm.
 
 **v1.3 (02-Aug-2021):**
-
 - tsv files now include realm, Baltimore group, a warning flag for genomes with <50% coding capacity (may be issues with the assembly), and the Genbank designation (i.e. PHG, ENV)
 
 **v1.2 (18-Feb-2021):**
-
 - Output files now written to directory, name of which can be specified (see usage).
 - List of excluded genomes now a separate file which can be edited and specified as a commandline argument (see usage).
 
 **v1.1 (09-Feb-2021):**
-
 - Improved host data, particularly for Cyanophages.
 - Fixed issue with some Prokka versions outputting .gbf and others outputting .gbk, both will now be read by this script.
 
@@ -93,6 +94,7 @@ To run this script, use inphared.pl with the following command:
 - `--cpus <8>` (`-c`): This flag allows users to specify the number of CPUs to be used in the Prokka step. This is a numeric argument and the default number is 8.
 - `--outdir <directory>` (`-o`): This flag allows users to specify the name of the output directory. If it doesn't already exist, the script will produce it. The default is `inphared_date`.
 - `--help` (`-h`): This flag will print a help menu to the screen without performing any analyses.
+- `--PHROG (`-P`): This optional flag allows users to specify the path to HMMs made from the PHROGs database, for consistent annotation of genomes (download the HMMs for yourself [HERE](https://s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz) and read about them [HERE](http://millardlab.org/2021/11/21/phage-annotation-with-phrogs/)). 
 
 Upon first usage, it will take a long time to call genes on all of the genomes. This time can be reduced by downloading the existing `GenomesDB/` directory from [HERE](http://inphared.s3.climb.ac.uk/GenomesDB_20201412.tar.gz). Download and unzip this tar archive in the directory you wish to run inphared.pl, so `GenomesDB` is a sub-directory of the desired working directory.
 
