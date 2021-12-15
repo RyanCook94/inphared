@@ -35,6 +35,9 @@ GetOptions(
     #the use of an exlcusion file, if desired
     'exclusion=s'   => \(my $exclusion = 0),
     
+    #the use of phrogs for annotation, if desired
+    'PHROG=s'   => \(my $phrog = 0),
+    
     #help menu
     'help' => \$help,  
 
@@ -46,11 +49,11 @@ $outdir =~ s/(\/)$//;
 #If user specified help, let's die and print something!
 if ($help) {
     
-    die "Name:\n INPHARED: INfrastructre for a PHAge REference Database v1.4\n\nContact:\n Ryan Cook <stxrc24\@nottingham.ac.uk>\n\nUsage:\n  perl inphared.pl [options]\n\nOptions:\n  --help        -h   This help.\n  --exclusion   -e   Pipe-delimited text file of accessions that should be excluded. This is recommended.\n  --outdir      -o   Output directory for files to be written to. Default is inphared_"."$date"." (changes daily).\n  --cpus        -c   Number of cpus to be used in Prokka gene calling. Default is 8.\n";
+    die "Name:\n INPHARED: INfrastructre for a PHAge REference Database v1.5\n\nContact:\n Ryan Cook <stxrc24\@nottingham.ac.uk>\n\nUsage:\n  perl inphared.pl [options]\n\nOptions:\n  --help        -h   This help.\n  --exclusion   -e   Pipe-delimited text file of accessions that should be excluded. This is recommended.\n  --outdir      -o   Output directory for files to be written to. Default is inphared_"."$date"." (changes daily).\n  --cpus        -c   Number of cpus to be used in Prokka gene calling. Default is 8.\n  --PHROG       -P   Absolute path to phrog HMM database for annotations (can be found on millardlab website). If not specified, Prokka will be run with the --noanno flag (no annotations, just gene calling).\n";
 }
 
 #Say hello to the user
-say "INPHARED: INfrastructre for a PHAge REference Database v1.4\n";
+say "INPHARED: INfrastructre for a PHAge REference Database v1.5\n";
 
 #Get full paths to mash, efetch, esearch, efilter and prokka. If one of these is not installed and available in PATH, the script will fail. It will tell you which it cannot find
 say "Searching for dependencies required for this script to run.\n";
@@ -1251,15 +1254,37 @@ sub filter_genomes {
                 #Unless it's one of the accessions that matches the code15 phages, annotate normally
                 unless($acc =~ m/MK250015|MK250016|MK250017|MK250018|MK250019|MK250020|MK250021|MK250022|MK250023|MK250024|MK250025|MK250026|MK250027|MK250028|MK250029/) {
                 
-                    #Define and run the Prokka command (Note that the number of cpus is set as a commandline argument, with a default value of 8)
-                    my $prokka = "$prokka_path --quiet --noanno --outdir $prokka_directory --prefix $acc --locustag $acc $seqfile --cpus $cpu";
-                    system("$prokka");
+                    #Let's work out if the PHROG flag has been used
+                    if($phrog) {
+                    
+                        #Define and run the Prokka command (Note that the number of cpus is set as a commandline argument, with a default value of 8)
+                        my $prokka = "$prokka_path --quiet --hmms $phrog --outdir $prokka_directory --prefix $acc --locustag $acc $seqfile --cpus $cpu";
+                        system("$prokka");
+                        
+                        } else {
+                        
+                        #Define and run the Prokka command (Note that the number of cpus is set as a commandline argument, with a default value of 8)
+                        my $prokka = "$prokka_path --noanno --outdir $prokka_directory --prefix $acc --locustag $acc $seqfile --cpus $cpu";
+                        system("$prokka");
+                        
+                        }
                     
                     } else {
                     
-                    #And if it is one, we'll annotate using code15
-                    my $prokka = "$prokka_path --quiet --noanno --outdir $prokka_directory --prefix $acc --locustag $acc $seqfile --cpus $cpu --gcode 15";
-                    system("$prokka");
+                    #Let's work out if the PHROG flag has been used
+                    if($phrog) {
+                    
+                        #And if it is one, we'll annotate using code15
+                        my $prokka = "$prokka_path --quiet --hmms $phrog --outdir $prokka_directory --prefix $acc --locustag $acc $seqfile --cpus $cpu --gcode 15";
+                        system("$prokka");
+                        
+                        } else {
+                        
+                        #And if it is one, we'll annotate using code15
+                        my $prokka = "$prokka_path --quiet --noanno --outdir $prokka_directory --prefix $acc --locustag $acc $seqfile --cpus $cpu --gcode 15";
+                        system("$prokka");
+                        
+                        }
                     
                     }
             };
