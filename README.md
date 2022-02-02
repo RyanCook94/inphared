@@ -59,6 +59,9 @@ Useful information, including viral taxonomy and bacterial host data, is extract
 
 ## Updates
 
+**v1.6 (02-Feb-2022):**
+- Added lines to correct spelling of certain hosts in table output file (e.g. Klebsiella, where original Genbank record has Kelbsiella).
+
 **v1.5 (15-Dec-2021):**
 - Added an optional flag to annotate genomes with HMMs produced from the [PHROGs](https://academic.oup.com/nargab/article/3/3/lqab067/6342220) database. Download the HMMs for yourself [HERE](http://s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz). Read about what we did [HERE](http://millardlab.org/2021/12/15/inphared-re-annotated-with-phrogs/).
 
