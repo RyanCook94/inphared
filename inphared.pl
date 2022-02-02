@@ -49,11 +49,11 @@ $outdir =~ s/(\/)$//;
 #If user specified help, let's die and print something!
 if ($help) {
     
-    die "Name:\n INPHARED: INfrastructre for a PHAge REference Database v1.5\n\nContact:\n Ryan Cook <stxrc24\@nottingham.ac.uk>\n\nUsage:\n  perl inphared.pl [options]\n\nOptions:\n  --help        -h   This help.\n  --exclusion   -e   Pipe-delimited text file of accessions that should be excluded. This is recommended.\n  --outdir      -o   Output directory for files to be written to. Default is inphared_"."$date"." (changes daily).\n  --cpus        -c   Number of cpus to be used in Prokka gene calling. Default is 8.\n  --PHROG       -P   Absolute path to phrog HMM database for annotations (can be found on millardlab website). If not specified, Prokka will be run with the --noanno flag (no annotations, just gene calling).\n";
+    die "Name:\n INPHARED: INfrastructre for a PHAge REference Database v1.6\n\nContact:\n Ryan Cook <stxrc24\@nottingham.ac.uk>\n\nUsage:\n  perl inphared.pl [options]\n\nOptions:\n  --help        -h   This help.\n  --exclusion   -e   Pipe-delimited text file of accessions that should be excluded. This is recommended.\n  --outdir      -o   Output directory for files to be written to. Default is inphared_"."$date"." (changes daily).\n  --cpus        -c   Number of cpus to be used in Prokka gene calling. Default is 8.\n  --PHROG       -P   Absolute path to phrog HMM database for annotations (can be found on millardlab website). If not specified, Prokka will be run with the --noanno flag (no annotations, just gene calling).\n";
 }
 
 #Say hello to the user
-say "INPHARED: INfrastructre for a PHAge REference Database v1.5\n";
+say "INPHARED: INfrastructre for a PHAge REference Database v1.6\n";
 
 #Get full paths to mash, efetch, esearch, efilter and prokka. If one of these is not installed and available in PATH, the script will fail. It will tell you which it cannot find
 say "Searching for dependencies required for this script to run.\n";
@@ -345,7 +345,7 @@ if (-e "$phagedb") {
 
     #If it doesn't exist, then download the genomes! Current search parameters download genomes with the PHG identifier and minimum/maximum length cutoffs. These are also filtered later on in the script
     say "$phagedb doesn't yet exist, so let's make it!\n";
-    say "This step may take some. Please feel free to put the kettle on...\n";
+    say "This step may take some. Please free free to put the kettle on...\n";
     system ("$esearch_path -db nucleotide -query \"$meta\" | $efilter_path -query \"1417:800000 [SLEN] \" | $efetch_path -format gb >$phagedb");
     system ("$esearch_path -db nucleotide -query \"gbdiv_PHG\"[prop] | $efilter_path -query \"1417:800000 [SLEN] \" | $efetch_path -format gb >>$phagedb"); 
 };
@@ -1499,7 +1499,7 @@ sub filter_genomes {
             }
             
             #Manual list of nonsense hosts which are changed to unspecified
-            if ($host =~ m/^Methylophilaceae$|^Idiomarinaceae$|^Chlorobiaceae$|^Alteromonadaceae$|^abalone$|^ANMV-1$|^Archaeal$|^Deep$|^Halocynthia$|^His$|^His2$|^IAS$|^Los$|^Marine$|^Salicola$|^Stx$|^TM$|^uncultured$/i) {
+            if ($host =~ m/^Methylophilaceae$|^Idiomarinaceae$|^Chlorobiaceae$|^Alteromonadaceae$|^abalone$|^ANMV-1$|^Archaeal$|^Deep$|^Halocynthia$|^His$|^His2$|^IAS$|^Los$|^Marine$|^Salicola$|^Stx$|^Hardygib1$|^CrAss-like$|^Proteobacteria$|^Aquificae$|^Erysiphe$|^Methylophilales$|^Sulfolobales$|^TM$|^uncultured$/i) {
             
                 #Change it to Unspecified
                 $host = "Unspecified";
@@ -1512,6 +1512,11 @@ sub filter_genomes {
             $host =~ s/Eschericha/Escherichia/gi;
             $host =~ s/Panteoa/Pantoea/gi;
             $host =~ s/Pseudomonad/Pseudomonas/gi;
+            $host =~ s/Baciilus/Bacillus/gi;
+            $host =~ s/Kelbsiella/Klebsiella/gi;
+            $host =~ s/Pectinobacterium/Pectobacterium/gi;
+            $host =~ s/Stretomyces/Streptomyces/gi;
+            $host =~ s/Synechoccus/Synechococcus/gi;
             
             #This script will grab the lowest taxa rank available from classification where possible (although some nonsense taxa will inevitably come through)
             my $lowest_taxa = "Unclassified";
