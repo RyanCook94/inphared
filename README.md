@@ -24,28 +24,28 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 
 ## Let me skip running the script and just give me this month's data!
 
-- [17Jan2022_data_excluding_refseq.tsv](http://inphared.s3.climb.ac.uk/17Jan2022_data_excluding_refseq.tsv)
-- [17Jan2022_data.tsv](http://inphared.s3.climb.ac.uk/17Jan2022_data.tsv)
-- [17Jan2022_genomes.db](http://inphared.s3.climb.ac.uk/17Jan2022_genomes.db)
-- [17Jan2022_genomes_excluding_refseq.fa](http://inphared.s3.climb.ac.uk/17Jan2022_genomes_excluding_refseq.fa)
-- [17Jan2022_genomes.fa](http://inphared.s3.climb.ac.uk/17Jan2022_genomes.fa)
-- [17Jan2022_genomes.fa.msh](http://inphared.s3.climb.ac.uk/17Jan2022_genomes.fa.msh)
-- [17Jan2022_itol_family_annotations.txt](http://inphared.s3.climb.ac.uk/17Jan2022_itol_family_annotations.txt)
-- [17Jan2022_itol_genus_annotations.txt](http://inphared.s3.climb.ac.uk/17Jan2022_itol_genus_annotations.txt)
-- [17Jan2022_itol_host_annotations.txt](http://inphared.s3.climb.ac.uk/17Jan2022_itol_host_annotations.txt)
-- [17Jan2022_itol_length_annotations.txt](http://inphared.s3.climb.ac.uk/17Jan2022_itol_length_annotations.txt)
-- [17Jan2022_itol_lowest_taxa_annotations.txt](http://inphared.s3.climb.ac.uk/17Jan2022_itol_lowest_taxa_annotations.txt)
-- [17Jan2022_itol_node_label_annotations.txt](http://inphared.s3.climb.ac.uk/17Jan2022_itol_node_label_annotations.txt)
-- [17Jan2022_itol_subfamily_annotations.txt](http://inphared.s3.climb.ac.uk/17Jan2022_itol_subfamily_annotations.txt)
-- [17Jan2022_phages_downloaded_from_genbank.gb](http://inphared.s3.climb.ac.uk/17Jan2022_phages_downloaded_from_genbank.gb)
-- [17Jan2022_refseq_genomes.fa](http://inphared.s3.climb.ac.uk/17Jan2022_refseq_genomes.fa)
-- [17Jan2022_vConTACT2_family_annotations.tsv](http://inphared.s3.climb.ac.uk/17Jan2022_vConTACT2_family_annotations.tsv)
-- [17Jan2022_vConTACT2_gene_to_genome.csv](http://inphared.s3.climb.ac.uk/17Jan2022_vConTACT2_gene_to_genome.csv)
-- [17Jan2022_vConTACT2_genus_annotations.tsv](http://inphared.s3.climb.ac.uk/17Jan2022_vConTACT2_genus_annotations.tsv)
-- [17Jan2022_vConTACT2_host_annotations.tsv](http://inphared.s3.climb.ac.uk/17Jan2022_vConTACT2_host_annotations.tsv)
-- [17Jan2022_vConTACT2_lowest_taxa_annotations.tsv](http://inphared.s3.climb.ac.uk/17Jan2022_vConTACT2_lowest_taxa_annotations.tsv)
-- [17Jan2022_vConTACT2_proteins.faa](http://inphared.s3.climb.ac.uk/17Jan2022_vConTACT2_proteins.faa)
-- [17Jan2022_vConTACT2_subfamily_annotations.tsv](http://inphared.s3.climb.ac.uk/17Jan2022_vConTACT2_subfamily_annotations.tsv)
+- [1Mar2022_data_excluding_refseq.tsv](http://inphared.s3.climb.ac.uk/1Mar2022_data_excluding_refseq.tsv)
+- [1Mar2022_data.tsv](http://inphared.s3.climb.ac.uk/1Mar2022_data.tsv)
+- [1Mar2022_genomes.db](http://inphared.s3.climb.ac.uk/1Mar2022_genomes.db)
+- [1Mar2022_genomes_excluding_refseq.fa](http://inphared.s3.climb.ac.uk/1Mar2022_genomes_excluding_refseq.fa)
+- [1Mar2022_genomes.fa](http://inphared.s3.climb.ac.uk/1Mar2022_genomes.fa)
+- [1Mar2022_genomes.fa.msh](http://inphared.s3.climb.ac.uk/1Mar2022_genomes.fa.msh)
+- [1Mar2022_itol_family_annotations.txt](http://inphared.s3.climb.ac.uk/1Mar2022_itol_family_annotations.txt)
+- [1Mar2022_itol_genus_annotations.txt](http://inphared.s3.climb.ac.uk/1Mar2022_itol_genus_annotations.txt)
+- [1Mar2022_itol_host_annotations.txt](http://inphared.s3.climb.ac.uk/1Mar2022_itol_host_annotations.txt)
+- [1Mar2022_itol_length_annotations.txt](http://inphared.s3.climb.ac.uk/1Mar2022_itol_length_annotations.txt)
+- [1Mar2022_itol_lowest_taxa_annotations.txt](http://inphared.s3.climb.ac.uk/1Mar2022_itol_lowest_taxa_annotations.txt)
+- [1Mar2022_itol_node_label_annotations.txt](http://inphared.s3.climb.ac.uk/1Mar2022_itol_node_label_annotations.txt)
+- [1Mar2022_itol_subfamily_annotations.txt](http://inphared.s3.climb.ac.uk/1Mar2022_itol_subfamily_annotations.txt)
+- [1Mar2022_phages_downloaded_from_genbank.gb](http://inphared.s3.climb.ac.uk/1Mar2022_phages_downloaded_from_genbank.gb)
+- [1Mar2022_refseq_genomes.fa](http://inphared.s3.climb.ac.uk/1Mar2022_refseq_genomes.fa)
+- [1Mar2022_vConTACT2_family_annotations.tsv](http://inphared.s3.climb.ac.uk/1Mar2022_vConTACT2_family_annotations.tsv)
+- [1Mar2022_vConTACT2_gene_to_genome.csv](http://inphared.s3.climb.ac.uk/1Mar2022_vConTACT2_gene_to_genome.csv)
+- [1Mar2022_vConTACT2_genus_annotations.tsv](http://inphared.s3.climb.ac.uk/1Mar2022_vConTACT2_genus_annotations.tsv)
+- [1Mar2022_vConTACT2_host_annotations.tsv](http://inphared.s3.climb.ac.uk/1Mar2022_vConTACT2_host_annotations.tsv)
+- [1Mar2022_vConTACT2_lowest_taxa_annotations.tsv](http://inphared.s3.climb.ac.uk/1Mar2022_vConTACT2_lowest_taxa_annotations.tsv)
+- [1Mar2022_vConTACT2_proteins.faa](http://inphared.s3.climb.ac.uk/1Mar2022_vConTACT2_proteins.faa)
+- [1Mar2022_vConTACT2_subfamily_annotations.tsv](http://inphared.s3.climb.ac.uk/1Mar2022_vConTACT2_subfamily_annotations.tsv)
 - [PHROGs HMMs for consistent annotation of genomes (see the new --PHROG optional flag)](http://s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz)
 - [GenomesDB Directory](http://inphared.s3.climb.ac.uk/GenomesDB_20201412.tar.gz) (please note that this doesn't get updated each month, it's just here as a time-saver if you run the script yourself. This version is for 13/Dec/2021)
 
@@ -58,6 +58,10 @@ Useful information, including viral taxonomy and bacterial host data, is extract
 ![](inphared_workthrough.png)
 
 ## Updates
+
+**v1.7 (03-Mar-2022):**
+- Added additional column to .tsv files which grabs any tags annotated as "host" or "lab_host", which is able to retrieve bacterial host for a number of genomes at the level of species. However, many of these values are inconsistent or not relating to the isolation host but to the environmental sample (e.g. wastewater).
+- When searching for MASH, the script will now automatically search for mash or mash.2. Should make it easier to find MASH on most user's systems.
 
 **v1.6 (02-Feb-2022):**
 - Added lines to correct spelling of certain hosts in table output file (e.g. Klebsiella, where original Genbank record has Kelbsiella).
