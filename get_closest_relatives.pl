@@ -244,7 +244,7 @@ sub mash {
     my $temp ="temp_temp.txt"; 
 
     #Run MASH to find nearest relatives to query, sort and write to temporary output file
-    my $mash_command = "mash.2 dist -p $threads -v $pvalue -d $distance $database $mash | sort -k3 -g | head -n $max >xtemp.txt";
+    my $mash_command = "$mash_path dist -p $threads -v $pvalue -d $distance $database $mash | sort -k3 -g | head -n $max >xtemp.txt";
     system("$mash_command");
 
     #Delete the sketch of the query
