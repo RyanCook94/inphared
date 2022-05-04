@@ -165,10 +165,10 @@ while (my $line = <RES>) {
         my $description = $entry[0]; 
         my $length = $entry[2];
         my $molgc = $entry[4];
-        my $host = $entry[12];
-        my $genus = $entry[14];
-        my $subfamily = $entry[15];
-        my $family = $entry[16];
+        my $host = $entry[13];
+        my $genus = $entry[15];
+        my $subfamily = $entry[16];
+        my $family = $entry[17];
     
         #Always important for potential trailing strings
         chomp $description;
