@@ -46,7 +46,7 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 - [1Oct2022_vConTACT2_lowest_taxa_annotations.tsv](http://inphared.s3.climb.ac.uk/1Oct2022_vConTACT2_lowest_taxa_annotations.tsv)
 - [1Oct2022_vConTACT2_proteins.faa](http://inphared.s3.climb.ac.uk/1Oct2022_vConTACT2_proteins.faa)
 - [1Oct2022_vConTACT2_subfamily_annotations.tsv](http://inphared.s3.climb.ac.uk/1Oct2022_vConTACT2_subfamily_annotations.tsv)
-- [PHROGs HMMs for consistent annotation of genomes (see the new --PHROG optional flag)](s3://ADM_share/all_phrogs.hmm.gz)
+- [PHROGs HMMs for consistent annotation of genomes (see the new --PHROG optional flag)](http://s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz)
 - [GenomesDB Directory](http://inphared.s3.climb.ac.uk/GenomesDB_20201412.tar.gz) (please note that this doesn't get updated each month, it's just here as a time-saver if you run the script yourself. This version is for 13/Dec/2021)
 
 ## Description
