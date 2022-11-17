@@ -183,6 +183,6 @@ For full list of optional arguments and usage, please use:
 
 ## Contact
 
-Please contact Ryan Cook ([ryan.cook@nottingham.ac.uk](ryan.cook@nottingham.ac.uk), [@RyanCookAMR](https://twitter.com/RyanCookAMR)) with any questions, concerns or comments.
+Please contact Ryan Cook ([Ryan.Cook@quadram.ac.uk](Ryan.Cook@quadram.ac.uk), [@RyanCookAMR](https://twitter.com/RyanCookAMR)) with any questions, concerns or comments.
 
 Thank you for using inphared.pl!
