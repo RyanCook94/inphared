@@ -40,7 +40,7 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 - [01Feb2023_phages_downloaded_from_genbank.gb](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_phages_downloaded_from_genbank.gb.gz)
 - [01Feb2023_refseq_genomes.fa](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_refseq_genomes.fa.gz)
 - [01Feb2023_vConTACT2_family_annotations.tsv](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_vConTACT2_family_annotations.tsv.gz)
-- [01Feb2023_vConTACT2_gene_to_genome.csv](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_vConTACT2_gene_to_genome.csv.gz)
+- [01Feb2023_vConTACT2_gene_to_genome.csv](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_vConTACT2_gene_to_genome.csv)
 - [01Feb2023_vConTACT2_genus_annotations.tsv](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_vConTACT2_genus_annotations.tsv.gz)
 - [01Feb2023_vConTACT2_host_annotations.tsv](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_vConTACT2_host_annotations.tsv.gz)
 - [01Feb2023_vConTACT2_lowest_taxa_annotations.tsv](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_vConTACT2_lowest_taxa_annotations.tsv.gz)
