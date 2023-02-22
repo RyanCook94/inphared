@@ -29,7 +29,7 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 - [01Feb2023_genomes.db](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_genomes.db.gz)
 - [01Feb2023_genomes_excluding_refseq.fa](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_genomes_excluding_refseq.fa.gz)
 - [01Feb2023_genomes.fa](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_genomes.fa.gz)
-- [01Feb2023_genomes.fa.msh](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_genomes.fa.msh.gz)
+- [01Feb2023_genomes.fa.msh](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_genomes.fa.msh)
 - [01Feb2023_itol_family_annotations.txt](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_itol_family_annotations.txt.gz)
 - [01Feb2023_itol_genus_annotations.txt](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_itol_genus_annotations.txt.gz)
 - [01Feb2023_itol_host_annotations.txt](https://millardlab-inphared.s3.climb.ac.uk/01Feb2023_itol_host_annotations.txt.gz)
