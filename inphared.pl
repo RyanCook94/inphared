@@ -1548,9 +1548,19 @@ sub filter_genomes {
             
                 $host = "Escherichia";
             }
+
+            if ($species_string =~ m/Saline Natrinema/) {
+            
+                $host = "Natrinema";
+            }
+
+            if ($species_string =~ m/Stx1_JNE110649/) {
+            
+                $host = "Escherichia";
+            }
             
             #Manual list of nonsense hosts which are changed to unspecified
-            if ($host =~ m/^Methylophilaceae$|^Idiomarinaceae$|^Chlorobiaceae$|^Alteromonadaceae$|^abalone$|^ANMV-1$|^Archaeal$|^Deep$|^Halocynthia$|^His$|^His2$|^IAS$|^Los$|^Marine$|^Salicola$|^Stx$|^Hardygib1$|^CrAss-like$|^Proteobacteria$|^Aquificae$|^Erysiphe$|^Methylophilales$|^Sulfolobales$|^TM$|^uncultured$/i) {
+            if ($host =~ m/^Huginn$|^Muninn$|^OM$|^Peromfec$|^Pinkberry$|^Satellite$|^Methylophilaceae$|^Idiomarinaceae$|^Chlorobiaceae$|^Alteromonadaceae$|^abalone$|^ANMV-1$|^Archaeal$|^Deep$|^Halocynthia$|^His$|^His2$|^IAS$|^Los$|^Marine$|^Salicola$|^Stx$|^Hardygib1$|^CrAss-like$|^Proteobacteria$|^Aquificae$|^Erysiphe$|^Methylophilales$|^Sulfolobales$|^TM$|^uncultured$/i) {
             
                 #Change it to Unspecified
                 $host = "Unspecified";
