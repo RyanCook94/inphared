@@ -47,7 +47,7 @@ Cook R, Brown N, Redgwell T, Rihtman B, Barnes M, Clokie M, Stekel DJ, Hobman JL
 - [1Nov2023_vConTACT2_proteins.faa](https://millardlab-inphared.s3.climb.ac.uk/1Nov2023_vConTACT2_proteins.faa.gz)
 - [1Nov2023_vConTACT2_subfamily_annotations.tsv](https://millardlab-inphared.s3.climb.ac.uk/1Nov2023_vConTACT2_subfamily_annotations.tsv.gz)
 - [PHROGs HMMs for consistent annotation of genomes (see the new --PHROG optional flag)](https://warwick.s3.climb.ac.uk/ADM_share/all_phrogs.hmm.gz)
-- [GenomesDB Directory](https://millardlab-inphared.s3.climb.ac.uk/GenomesDB_20201412.tar.gz) (please note that this doesn't get updated each month, it's just here as a time-saver if you run the script yourself. This version is for 13/Dec/2021)
+- [GenomesDB Directory](https://millardlab-inphared.s3.climb.ac.uk/GenomesDB12102022.tar.gz) (please note that this doesn't get updated each month, it's just here as a time-saver if you run the script yourself. This version is for 13/Dec/2021)
 
 ## Description
 
